@@ -1,0 +1,25 @@
+Main: Beginning execution
+Main: logfile 'zzalog.txt'
+
+
+PASS ONE
+    0                                           *23 567 9 123 56789 1
+    1                                           *ll mmm a sss hhhhh * comment
+    2    0  000000000000 1100 1100 1100 1100        LD    IDX       * load ACC with value at IDX
+    3    0  000000000000 1100 1100 1100 1100        WRT             * write it
+    4                                           *
+    5    0  000000000000 1100 1100 1100 1100 TOP    ADD   N         * add in N
+    6    0  000000000000 1100 1100 1100 1100        ADD   ONE       * add in ONE
+    7    0  000000000000 1100 1100 1100 1100        WRT             * write the new value
+    8    0  000000000000 1100 1100 1100 1100        STC   NN        * store the new value
+    9                                           *
+   10    0  000000000000 1100 1100 1100 1100 BAD    HEX       -0002 * bad data location
+   11    0  000000000000 1100 1100 1100 1100        STP   ... .....
+   12                                           *
+   13    0  000000000000 1100 1100 1100 1100 IDX    HEX       -0002 * loop index
+   14    0  000000000000 1100 1100 1100 1100 ONE    HEX       +0001 * we need a constant 1
+   15    0  000000000000 1100 1100 1100 1100 N      HEX       +0001 * 
+   16    0  000000000000 1100 1100 1100 1100 NN     HEX       +0009 *
+   17    0  000000000000 1100 1100 1100 1100        END   ... .....
+
+Main: Ending execution

@@ -1,0 +1,64 @@
+./Aprog ../../xin1 adotout1 xlog1
+./Aprog ../../xin2 adotout2 xlog2
+./Aprog ../../xin3 adotout3 xlog3
+./Aprog ../../xin4 adotout4 xlog4
+./Aprog ../../xin5 adotout5 xlog5
+./Aprog ../../xin6 adotout6 xlog6
+./Aprog ../../yfib adotoutfib yfiblog
+./Aprog ../../yloop adotoutloop ylooplog
+./Aprog ../../ydata adotoutdata ydatalog
+./Aprog ../../ysquares adotoutsquares ysquareslog
+./Aprog ../../yreadwrite adotoutreadwrite yreadwritelog
+##
+echo 'CHECK 1'
+diff adotout1.txt adotout1.txt.bup
+diff xlog1.txt xlog1.txt.bup
+##
+echo 'CHECK 2'
+diff adotout2.txt adotout2.txt.bup
+diff xlog2.txt xlog2.txt.bup
+##
+echo 'CHECK 3'
+diff adotout3.txt adotout3.txt.bup
+diff xlog3.txt xlog3.txt.bup
+##
+echo 'CHECK 4'
+diff adotout4.txt adotout4.txt.bup
+cmp adotout4.bin adotout4.bin.bup
+diff xlog4.txt xlog4.txt.bup
+##
+echo 'CHECK 5'
+diff adotout5.txt adotout5.txt.bup
+cmp adotout5.bin adotout5.bin.bup
+diff xlog5.txt xlog5.txt.bup
+##
+echo 'CHECK 6'
+diff adotout6.txt adotout6.txt.bup
+cmp adotout6.bin adotout6.bin.bup
+diff xlog6.txt xlog6.txt.bup
+##
+echo 'CHECK DATA'
+diff adotoutdata.txt adotoutdata.txt.bup
+cmp adotoutdata.bin adotoutdata.bin.bup
+diff ydatalog.txt ydatalog.txt.bup
+##
+echo 'CHECK FIB'
+diff adotoutfib.txt adotoutfib.txt.bup
+cmp adotoutfib.bin adotoutfib.bin.bup
+diff yfiblog.txt yfiblog.txt.bup
+##
+echo 'CHECK LOOP'
+diff adotoutloop.txt adotoutloop.txt.bup
+cmp adotoutloop.bin adotoutloop.bin.bup
+diff ylooplog.txt ylooplog.txt.bup
+##
+echo 'CHECK READWRITE'
+diff adotoutreadwrite.txt adotoutreadwrite.txt.bup
+cmp adotoutreadwrite.bin adotoutreadwrite.bin.bup
+diff yreadwritelog.txt yreadwritelog.txt.bup
+##
+echo 'CHECK SQUARES'
+diff adotoutsquares.txt adotoutsquares.txt.bup
+cmp adotoutsquares.bin adotoutsquares.bin.bup
+diff ysquareslog.txt ysquareslog.txt.bup
+##
